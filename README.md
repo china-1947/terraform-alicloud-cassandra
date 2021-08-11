@@ -19,7 +19,7 @@ You can use this in your terraform template with the following steps.
 1. Adding a module resource to your template, e.g., main.tf
 
     ```
-      module "rule" {
+      module "cassandra" {
       source       = "../"
       cluster_name = "cassandra-cluster-name-tf"
       }
