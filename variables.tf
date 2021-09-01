@@ -1,27 +1,3 @@
-variable "zone_id" {
-  description = "The instance zone ID."
-  type        = string
-  default     = "cn-hangzhou-g"
-}
-
-variable "vpc_cidr_block" {
-  description = "The specification of the vpc cidr block."
-  type        = string
-  default     = "192.168.0.0/16"
-}
-
-variable "vpc_name" {
-  description = "The specification of the vpc name."
-  type        = string
-  default     = "tf-cassandra"
-}
-
-variable "vswitch_cidr_block" {
-  description = "The specification of the vswitch cidr block."
-  type        = string
-  default     = "192.168.1.0/24"
-}
-
 variable "cluster_name" {
   description = "The specification of cluster name."
   type        = string
@@ -92,4 +68,10 @@ variable "ip_white" {
   description = "The specification of ip white."
   type        = string
   default     = "127.0.0.1"
+}
+
+variable "vswitch_id" {
+  description = "VSwitch variables, if vswitch_id is empty, then the net_type = classic."
+  type        = string
+  default     = ""
 }

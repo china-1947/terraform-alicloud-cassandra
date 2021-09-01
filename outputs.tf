@@ -1,17 +1,7 @@
-locals {
-  this_id         = alicloud_cassandra_cluster.example.id
-  this_vswitch_id = alicloud_vswitch.example.id
-  this_vpc_id     = alicloud_vpc.example.id
-}
-
 output "this_id" {
-  value = local.this_id
+  value = alicloud_cassandra_cluster.example.id
 }
 
-output "this_vswitch_id" {
-  value = local.this_vswitch_id
-}
-
-output "this_vpc_id" {
-  value = local.this_vpc_id
+output "this_name" {
+  value = alicloud_cassandra_cluster.example.cluster_name
 }

@@ -11,26 +11,13 @@ These types of resources are supported:
 
 * [alicloud_cassandra_cluster](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cassandra_cluster)
 
-## Requirements
-
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | > = 0.13.0 |
-| <a name="requirement_alicloud"></a> [alicloud](#requirement\_alicloud) | > = 1.131.0 |
-
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | > = 1.131.0 |
-
 ## Usage
 
 ```hcl
-  module "main" {
-    source       = "../"
-    cluster_name = "cassandra-cluster-name-tf"
-  }
+module "example" {
+  source       = "terraform-alicloud-modules/cassandra/alicloud"
+  cluster_name = "cassandra-cluster-name-tf"
+}
 ```
 
 ## Notes
@@ -38,11 +25,25 @@ These types of resources are supported:
 * This module using AccessKey and SecretKey are from `profile` and `shared_credentials_file`. If you have not set them
   yet, please install [aliyun-cli](https://github.com/aliyun/aliyun-cli#installation) and configure it.
 
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | > = 0.13.0 |
+| <a name="requirement_alicloud"></a> [alicloud](#requirement\_alicloud) | > = 1.88.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | > = 1.88.0 |
+
 ## Submit Issues
 
-If you have any problems when using this module, please opening a [provider issue](https://github.com/aliyun/terraform-provider-alicloud/issues/new) and let us know.
+If you have any problems when using this module, please opening
+a [provider issue](https://github.com/aliyun/terraform-provider-alicloud/issues/new) and let us know.
 
-**Note:** There does not recommend to open an issue on this repo.
+**Note:** There does not recommend opening an issue on this repo.
 
 ## Authors
 
